@@ -79,7 +79,7 @@ function beginWork(
 
 ## update时
 
-我们可以看到，满足如下情况时`didReceiveUpdate === false`（即可以直接复用前一次更新的`子Fiber`，不需要新建`子Fiber`）
+我们可以看到，满足如下情况时`didReceiveUpdate === true`（即可以直接复用前一次更新的`子Fiber`，不需要新建`子Fiber`）
 
 1. `oldProps === newProps && workInProgress.type === current.type`，即`props`与`fiber.type`不变
 2. `!includesSomeLane(renderLanes, updateLanes)`，即当前`Fiber节点`优先级不够，会在讲解`Scheduler`时介绍
