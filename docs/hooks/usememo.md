@@ -29,11 +29,11 @@ function mountCallback<T>(callback: T, deps: Array<mixed> | void | null): T {
 }
 ```
 
-可以看到，与`mountCallback`这两个唯一的区别是
+可以看到，`mountMemo`与`mountCallback`这两个hook唯一的区别是
 
 - `mountMemo`会将`回调函数`(nextCreate)的执行结果作为`value`保存
 
-- `mountCallback`会保存`回调函数`果作为`value`保存
+- `mountCallback`会将`回调函数`作为`value`保存
 
 ## update
 
